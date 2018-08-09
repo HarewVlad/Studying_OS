@@ -9,7 +9,7 @@ gdt_start:
 		db 0x0 ; base 16 - 23
 		db 10011010b ; P DPL(2 bits) 11 C R A = 8 bits
 		db 11001111b ; G D 0 AVL limit(16 - 19 bits)
-		db 0x0
+		db 0x0 ; base 24 - 31
 
 	gdt_data:
 		dw 0xffff ; limit 0 - 15
@@ -17,7 +17,7 @@ gdt_start:
 		db 0x0 ; base 16 - 23
 		db 10010010b ; P DPL(2 bits) 10 E W A 
 		db 11001111b ; B G 0 AVL limit (16 - 19)
-		db 0x0
+		db 0x0 ; base 24 - 31
 
 	gdt_end:
 
